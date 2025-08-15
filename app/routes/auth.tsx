@@ -14,6 +14,11 @@ const Auth = () => {
     const next = location.search.split('next=')[1];
     const navigate = useNavigate();
 
+
+    useEffect(() => {
+        if(!isLoading && !auth.isAuthenticated) navigate(`/auth?next=/resume/${id}`)
+    },[isLoading ]);
+
     useEffect(() => {
         if(auth.isAuthenticated) navigate(next)
     },[auth.isAuthenticated , next]);

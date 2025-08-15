@@ -16,7 +16,7 @@ const Auth = () => {
 
 
     useEffect(() => {
-        if(!isLoading && !auth.isAuthenticated) navigate(`/auth?next=/resume/${id}`)
+        if(!isLoading && !auth.isAuthenticated) navigate(`/auth?next=/resume`)
     },[isLoading ]);
 
     useEffect(() => {
